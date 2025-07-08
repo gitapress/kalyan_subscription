@@ -1,132 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Kalyan Subscription</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            color: white;
-            position: relative;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8">
+  <title>Kalyan Subscription</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
 
-        .background {
-            background-image: url('LOGO GP.png');
-            background-size: 700px;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.1;
-        }
+    .background {
+      background-image: url('LOGO GP.png');
+      background-size: 700px;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.1;
+    }
 
-        .centered-container {
-            text-align: center;
-            padding: 30px 20px;
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: auto;
-        }
+    header {
+      background-color: #4CAF50;
+      padding: 10px;
+      text-align: center;
+    }
 
-        h1, h2, h3, h4, h5, h6 {
-            color: red;
-            font-weight: bold;
-            margin: 10px 0;
-            border-radius: 5px;
-            border-color: black;
-        }
+    header img {
+      height: 50px;
+      vertical-align: middle;
+    }
 
-        h3 {
-            font-size: 1rem;
-        }
+    header h1 {
+      display: inline-block;
+      color: white;
+      margin: 0;
+      font-size: 1.5rem;
+      vertical-align: middle;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 5px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
+    .centered-container {
+      text-align: center;
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
 
-        .btn:hover {
-            background-color: #45a049;
-        }
+    h1, h2, h3, h4, h5, h6 {
+      color: red;
+      font-weight: bold;
+      margin: 10px 0;
+    }
 
-        img {
-            max-width: 150px;
-            height: auto;
-            margin-bottom: 10px;
-        }
+    h3 {
+      font-size: 1rem;
+    }
 
-        @media (max-width: 600px) {
-            h1, h2, h3, h4, h5, h6 {
-                font-size: 1rem;
-            }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px 5px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
 
-            .btn {
-                display: block;
-                width: 80%;
-                margin: 10px auto;
-                font-size: 1rem;
-            }
+    .btn:hover {
+      background-color: #45a049;
+    }
 
-            .background {
-                background-size: 300px;
-            }
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      width: 100%;
+      opacity: 0.6;
+    }
 
-            img {
-                max-width: 100px;
-            }
-        }
-    </style>
+    img {
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      h1, h2, h3, h4, h5, h6 {
+        font-size: 1rem;
+      }
+
+      .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        font-size: 1rem;
+      }
+
+      .background {
+        background-size: 300px;
+      }
+
+      img {
+        max-width: 100px;
+      }
+
+      header h1 {
+        font-size: 1.2rem;
+      }
+
+      header img {
+        height: 40px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="background"></div>
+  <div class="background"></div>
 
-    <div class="centered-container">
-        <h2>नवीनीकरण एवं नई सदस्यता हेतु</h2>
-        <h2>For Renewal and New Subscription</h2>
-        <h2>_____________________________</h2>
-
-        <!-- Logo image before H1 -->
-        <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
-    <img src="LOGO.png" alt="Logo" style="max-width: 60px; height: auto;">
-    <h1 style="margin: 0;">कल्याण गीताप्रेस गोरखपुर</h1><div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
-    <img src="LOGO.png" alt="Logo" style="max-width: 60px; height: auto;">
-</div>
-</div>
-        <h1>____________</h1>
-
-        <h3>Rs 500/- विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक रजिस्टर्ड डाक से (1 वर्ष)</h3>
-        <h3>Rs 2500/- विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक रजिस्टर्ड डाक से (5 वर्ष)</h3>
-        <h3>Rs 300/- विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक साधारण डाक से (1 वर्ष)</h3>
-        <h3>Rs 1500/- विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक साधारण डाक से (5 वर्ष)</h3>
-        <h3>___________________________________________________________</h3>
-
-        <h4>*रजिस्टर्ड डाक मे ट्रैकिंग सुविधा उपलब्ध हैं</h4>
-        <h4>*साधारण डाक मे ट्रैकिंग सुविधा नहीं उपलब्ध हैं</h4>
-        <h4>*डिस्पैच की सूचना WhatsApp पर दी जाती</h4>
-        <h4>*कृपया अपना WhatsApp No. अपडेट कराएं</h4>
-        <h4>__________________________________</h4>
-
-        <!-- Payment buttons -->
-        <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725619515" class="btn" target="_blank">₹ 500</a>
-        <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725616393" class="btn" target="_blank">₹ 2500</a>
-        <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725620225" class="btn" target="_blank">₹ 300</a>
-        <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725618784" class="btn" target="_blank">₹ 1500</a>
+  <!-- Header -->
+  <header>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
+      <img src="LOGO.png" alt="Logo" style="max-width: 60px; height: auto;">
+      <h1 style="margin: 0;">कल्याण गीताप्रेस गोरखपुर</h1>
+      <img src="LOGO.png" alt="Logo" style="max-width: 60px; height: auto;">
     </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="centered-container">
+    <h2>नवीनीकरण एवं नई सदस्यता हेतु</h2>
+    <h2>For Renewal and New Subscription</h2>
+    <h2>_____________________________</h2>
+
+    <h3>₹500/- विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक रजिस्टर्ड डाक से (1 वर्ष)</h3>
+    <h3>₹2500/- विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक रजिस्टर्ड डाक से (5 वर्ष)</h3>
+    <h3>₹300/- विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक साधारण डाक से (1 वर्ष)</h3>
+    <h3>₹1500/- विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक साधारण डाक से (5 वर्ष)</h3>
+    <h3>___________________________________________________________</h3>
+
+    <h4>*रजिस्टर्ड डाक मे ट्रैकिंग सुविधा उपलब्ध हैं</h4>
+    <h4>*साधारण डाक मे ट्रैकिंग सुविधा नहीं उपलब्ध हैं</h4>
+    <h4>*डिस्पैच की सूचना WhatsApp पर दी जाती</h4>
+    <h4>*कृपया अपना WhatsApp No. अपडेट कराएं</h4>
+    <h4>__________________________________</h4>
+
+    <!-- Payment buttons -->
+    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725619515" class="btn" target="_blank">₹ 500</a>
+    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725616393" class="btn" target="_blank">₹ 2500</a>
+    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725620225" class="btn" target="_blank">₹ 300</a>
+    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725618784" class="btn" target="_blank">₹ 1500</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 गीताप्रेस गोरखपुर | संपर्क करें: <a href="mailto:kalyan@gitapress.org" style="color: #ccc;">kalyan@gitapress.org</a> |
+    WhatsApp: +91-9235400242
+  </footer>
+
+  <!-- ✅ Interakt Chat Script -->
+ <script>
+  (function (w, d, s, c, r, a, m) {
+    w['KiwiObject'] = r;
+    w[r] = w[r] || function () {
+      (w[r].q = w[r].q || []).push(arguments);
+    };
+    w[r].l = new Date().getTime();
+    a = d.createElement(s);
+    m = d.getElementsByTagName(s)[0];
+    a.async = true;
+    a.src = c;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    'script',
+    'https://app.interakt.ai/kiwi-sdk/kiwi-sdk-17-prod-min.js?v=' + new Date().getTime(),
+    'kiwi'
+  );
+
+  window.addEventListener('load', function () {
+    kiwi.init('', 'vcArvm1VRALfFMQCLueRDlVdRz2eAVp9', {});
+  });
+</script>
+
 </body>
 </html>
