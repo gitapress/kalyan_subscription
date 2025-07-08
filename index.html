@@ -14,11 +14,12 @@
       display: flex;
       flex-direction: column;
       overflow-x: hidden;
+      background-color: #000; /* fallback color */
     }
 
     .background {
       background-image: url('LOGO GP.png');
-      background-size: 700px;
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       position: fixed;
@@ -78,6 +79,7 @@
       text-decoration: none;
       border-radius: 5px;
       font-size: 1rem;
+      transition: background-color 0.3s ease;
     }
 
     .btn:hover {
@@ -90,7 +92,7 @@
       text-align: center;
       padding: 15px;
       width: 100%;
-      opacity: 0.6;
+      font-size: 0.9rem;
     }
 
     img {
@@ -100,13 +102,21 @@
     }
 
     @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.2rem;
+      }
+
+      header img {
+        height: 40px;
+      }
+
       h1, h2, h3, h4, h5, h6 {
         font-size: 1rem;
       }
 
       .btn {
         display: block;
-        width: 80%;
+        width: 90%;
         margin: 10px auto;
         font-size: 1rem;
       }
@@ -119,12 +129,8 @@
         max-width: 100px;
       }
 
-      header h1 {
-        font-size: 1.2rem;
-      }
-
-      header img {
-        height: 40px;
+      footer {
+        font-size: 0.8rem;
       }
     }
   </style>
@@ -135,9 +141,9 @@
   <!-- Header -->
   <header>
     <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
-      <img src="LOGO.png" alt="Logo" style="max-width: 60px; height: auto;">
-      <h1 style="margin: 0;">कल्याण गीताप्रेस गोरखपुर</h1>
-      <img src="LOGO.png" alt="Logo" style="max-width: 60px; height: auto;">
+      <img src="LOGO.png" alt="Logo">
+      <h1>कल्याण गीताप्रेस गोरखपुर</h1>
+      <img src="LOGO.png" alt="Logo">
     </div>
   </header>
 
@@ -168,35 +174,30 @@
 
   <!-- Footer -->
   <footer>
-    © 2025 गीताप्रेस गोरखपुर | संपर्क करें: <a href="mailto:kalyan@gitapress.org" style="color: #ccc;">kalyan@gitapress.org</a> |
-    WhatsApp: +91-9235400242
+    © 2025 गीताप्रेस गोरखपुर | संपर्क करें: 
+    <a href="mailto:kalyan@gitapress.org" style="color: #ccc;">kalyan@gitapress.org</a> | WhatsApp: +91-9235400242
   </footer>
 
   <!-- ✅ Interakt Chat Script -->
- <script>
-  (function (w, d, s, c, r, a, m) {
-    w['KiwiObject'] = r;
-    w[r] = w[r] || function () {
-      (w[r].q = w[r].q || []).push(arguments);
-    };
-    w[r].l = new Date().getTime();
-    a = d.createElement(s);
-    m = d.getElementsByTagName(s)[0];
-    a.async = true;
-    a.src = c;
-    m.parentNode.insertBefore(a, m);
-  })(
-    window,
-    document,
-    'script',
-    'https://app.interakt.ai/kiwi-sdk/kiwi-sdk-17-prod-min.js?v=' + new Date().getTime(),
-    'kiwi'
-  );
+  <script>
+    (function (w, d, s, c, r, a, m) {
+      w['KiwiObject'] = r;
+      w[r] = w[r] || function () {
+        (w[r].q = w[r].q || []).push(arguments);
+      };
+      w[r].l = new Date().getTime();
+      a = d.createElement(s);
+      m = d.getElementsByTagName(s)[0];
+      a.async = true;
+      a.src = c;
+      m.parentNode.insertBefore(a, m);
+    })(window, document, 'script',
+       'https://app.interakt.ai/kiwi-sdk/kiwi-sdk-17-prod-min.js?v=' + new Date().getTime(),
+       'kiwi');
 
-  window.addEventListener('load', function () {
-    kiwi.init('', 'vcArvm1VRALfFMQCLueRDlVdRz2eAVp9', {});
-  });
-</script>
-
+    window.addEventListener('load', function () {
+      kiwi.init('', 'vcArvm1VRALfFMQCLueRDlVdRz2eAVp9', {});
+    });
+  </script>
 </body>
 </html>
