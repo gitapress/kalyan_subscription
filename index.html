@@ -182,41 +182,8 @@
     .social-btn.instagram:hover { background-color: #E4405F; }
     .social-btn.youtube:hover { background-color: #FF0000; }
 
-    /* === Toggle Button (Mobile) === */
-    .toggle-sidebar-btn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1001;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 50%;
-      font-size: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: right 0.3s ease, transform 0.3s ease;
-    }
-
-    .toggle-sidebar-btn.active {
-      transform: translateX(-60px);
-    }
-
     /* === Responsive (Mobile) === */
     @media (max-width: 600px) {
-      .social-sidebar {
-        display: none;
-      }
-
-      .social-sidebar.active {
-        display: flex;
-      }
-
-      .toggle-sidebar-btn {
-        display: block;
-      }
-
       header img {
         height: 40px;
       }
@@ -270,10 +237,10 @@
     <hr>
 
     <!-- Payment Buttons -->
-    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725619515" class="btn" target="_blank">₹500</a>
-    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725616393" class="btn" target="_blank">₹2500</a>
-    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725620225" class="btn" target="_blank">₹300</a>
-    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725618784" class="btn" target="_blank">₹1500</a>
+    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725619515" class="btn" target="_blank">₹ 500</a>
+    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725616393" class="btn" target="_blank">₹ 2500</a>
+    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725620225" class="btn" target="_blank">₹ 300</a>
+    <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725618784" class="btn" target="_blank">₹ 1500</a>
   </div>
 
   <!-- Footer -->
@@ -282,34 +249,21 @@
     <a href="mailto:kalyan@gitapress.org">kalyan@gitapress.org</a> | WhatsApp: +91-9235400242
   </footer>
 
-  <!-- Toggle Sidebar Button -->
-  <button class="toggle-sidebar-btn" onclick="toggleSidebar()">☰</button>
-
   <!-- Social Sidebar -->
-  <div class="social-sidebar" id="socialSidebar">
-    <a href="https://x.com/@GitaPress" target="_blank" class="social-btn twitter" data-tooltip="Twitter">
+  <div class="social-sidebar">
+    <a href="https://twitter.com" target="_blank" class="social-btn twitter" data-tooltip="Twitter">
       <i class="fab fa-twitter"></i>
     </a>
-    <a href="https://www.facebook.com/Gitapresssince1923" target="_blank" class="social-btn facebook" data-tooltip="Facebook">
+    <a href="https://facebook.com" target="_blank" class="social-btn facebook" data-tooltip="Facebook">
       <i class="fab fa-facebook-f"></i>
     </a>
-    <a href="https://www.instagram.com/gitapress_since1923/#" target="_blank" class="social-btn instagram" data-tooltip="Instagram">
+    <a href="https://instagram.com" target="_blank" class="social-btn instagram" data-tooltip="Instagram">
       <i class="fab fa-instagram"></i>
     </a>
-    <a href="https://www.youtube.com/channel/UC12fbE3rHjtxiiKBuxLSEUQ" target="_blank" class="social-btn youtube" data-tooltip="YouTube">
+    <a href="https://youtube.com" target="_blank" class="social-btn youtube" data-tooltip="YouTube">
       <i class="fab fa-youtube"></i>
     </a>
   </div>
-
-  <!-- Toggle Script -->
-  <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById('socialSidebar');
-      const toggleBtn = document.querySelector('.toggle-sidebar-btn');
-      sidebar.classList.toggle('active');
-      toggleBtn.classList.toggle('active'); // slide button
-    }
-  </script>
 
   <!-- Interakt Script -->
   <script>
