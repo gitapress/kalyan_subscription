@@ -87,6 +87,7 @@
       width: 60px;
       transition: background-color 0.3s;
       text-align: center;
+      flex-shrink: 0;
     }
 
     .btn:hover {
@@ -96,15 +97,16 @@
     .subscription-row {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
+      justify-content: flex-start;
       flex-wrap: wrap;
-      margin: 10px 0;
+      gap: 10px;
+      margin: 15px 0;
+      text-align: left;
     }
 
     .subscription-row span {
       color: red;
-      max-width: 90%;
+      flex: 1 1 200px;
     }
 
     footer {
@@ -121,108 +123,29 @@
       color: inherit;
     }
 
-    /* Sidebar Styles (Desktop) */
-    .social-sidebar {
-      position: fixed;
-      top: 40%;
-      right: 0;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      z-index: 1000;
-    }
-
-    .social-btn {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 45px;
-      height: 45px;
-      margin: 5px 0;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px 0 0 5px;
-      font-size: 18px;
-      transition: background-color 0.3s ease;
-    }
-
-    .social-btn::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      right: 110%;
-      background-color: black;
-      color: white;
-      padding: 6px 10px;
-      border-radius: 5px;
-      white-space: nowrap;
-      opacity: 0;
-      transform: translateY(-50%) translateX(10px);
-      top: 50%;
-      pointer-events: none;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      font-size: 13px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-      z-index: 1002;
-    }
-
-    .social-btn::before {
-      content: "";
-      position: absolute;
-      right: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-      border-width: 6px;
-      border-style: solid;
-      border-color: transparent black transparent transparent;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 1001;
-    }
-
-    .social-btn:hover::after {
-      opacity: 1;
-      transform: translateY(-50%) translateX(10%);
-    }
-
-    .social-btn:hover::before {
-      opacity: 1;
-    }
-
-    .social-btn.twitter:hover { background-color: #1DA1F2; }
-    .social-btn.facebook:hover { background-color: #3b5998; }
-    .social-btn.instagram:hover { background-color: #E4405F; }
-    .social-btn.youtube:hover { background-color: #FF0000; }
-
-    /* Mobile Social Buttons */
     .mobile-social-buttons {
       display: none;
     }
 
-    @media (max-width: 600px) {
-      .social-sidebar {
-        display: none;
-      }
+    .mobile-social-buttons .social-btn {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
 
+    @media (max-width: 600px) {
       .mobile-social-buttons {
         display: flex;
         justify-content: center;
         gap: 10px;
         margin: 20px 0 10px;
-      }
-
-      .mobile-social-buttons .social-btn {
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-        background-color: #4CAF50;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
       }
 
       header img {
@@ -322,41 +245,5 @@
     © 2025 गीताप्रेस गोरखपुर | संपर्क करें:
     <a href="mailto:kalyan@gitapress.org">kalyan@gitapress.org</a> | WhatsApp: +91-9235400242
   </footer>
-
-  <!-- Desktop Social Sidebar -->
-  <div class="social-sidebar">
-    <a href="https://x.com/@GitaPress" target="_blank" class="social-btn twitter" data-tooltip="Twitter">
-      <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://www.facebook.com/Gitapresssince1923" target="_blank" class="social-btn facebook" data-tooltip="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.instagram.com/gitapress_since1923/#" target="_blank" class="social-btn instagram" data-tooltip="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.youtube.com/channel/UC12fbE3rHjtxiiKBuxLSEUQ" target="_blank" class="social-btn youtube" data-tooltip="YouTube">
-      <i class="fab fa-youtube"></i>
-    </a>
-  </div>
-
-  <!-- Interakt Script -->
-  <script>
-    (function (w, d, s, u, o, f, j) {
-      w['KiwiObject'] = o;
-      w[o] = w[o] || function () {
-        (w[o].q = w[o].q || []).push(arguments);
-      };
-      w[o].l = new Date().getTime();
-      f = d.createElement(s);
-      j = d.getElementsByTagName(s)[0];
-      f.async = true;
-      f.src = u + '?v=' + w[o].l;
-      j.parentNode.insertBefore(f, j);
-    })(window, document, 'script', 'https://app.interakt.ai/kiwi-sdk/kiwi-sdk-17-prod-min.js', 'kiwi');
-
-    window.addEventListener('load', function () {
-      kiwi.init('', 'vcArvm1VRALfFMQCLueRDlVdRz2eAVp9', {});
-    });
-  </script>
 </body>
 </html>
