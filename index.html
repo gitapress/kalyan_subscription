@@ -69,7 +69,7 @@
 
     h3 {
       font-size: 1rem;
-      line-height: 1.4;
+      line-height: 1.6;
     }
 
     h4 {
@@ -81,16 +81,30 @@
       background-color: #4CAF50;
       color: white;
       padding: 6px 10px;
-      margin: 10px 5px;
       text-decoration: none;
       border-radius: 5px;
       font-size: 1rem;
       width: 60px;
       transition: background-color 0.3s;
+      text-align: center;
     }
 
     .btn:hover {
       background-color: #45a049;
+    }
+
+    .subscription-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+
+    .subscription-row span {
+      color: red;
+      max-width: 90%;
     }
 
     footer {
@@ -181,12 +195,7 @@
     .social-btn.instagram:hover { background-color: #E4405F; }
     .social-btn.youtube:hover { background-color: #FF0000; }
 
-    /* Toggle Button (Unused in this version) */
-    .toggle-sidebar-btn {
-      display: none;
-    }
-
-    /* Mobile View Social Buttons */
+    /* Mobile Social Buttons */
     .mobile-social-buttons {
       display: none;
     }
@@ -229,8 +238,7 @@
       }
 
       .btn {
-        width: 90%;
-        margin: 10px auto;
+        width: 60px;
         font-size: 1rem;
       }
 
@@ -256,11 +264,34 @@
     <h2>For Renewal and New Subscription</h2>
     <hr>
 
-    <h3><a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725619515" class="btn" target="_blank">₹500</a>
- विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक रजिस्टर्ड डाक से (1 वर्ष)</h3>
-    <h3><a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725616393" class="btn" target="_blank">₹2500</a> विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक रजिस्टर्ड डाक से (5 वर्ष)</h3>
-    <h3><a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725620225" class="btn" target="_blank">₹300</a> विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक साधारण डाक से (1 वर्ष)</h3>
-    <h3><a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725618784" class="btn" target="_blank">₹1500</a> विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक साधारण डाक से (5 वर्ष)</h3>
+    <h3>
+      <div class="subscription-row">
+        <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725619515" class="btn" target="_blank">₹500</a>
+        <span>विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक रजिस्टर्ड डाक से (1 वर्ष)</span>
+      </div>
+    </h3>
+
+    <h3>
+      <div class="subscription-row">
+        <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725616393" class="btn" target="_blank">₹2500</a>
+        <span>विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक रजिस्टर्ड डाक से (5 वर्ष)</span>
+      </div>
+    </h3>
+
+    <h3>
+      <div class="subscription-row">
+        <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725620225" class="btn" target="_blank">₹300</a>
+        <span>विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक साधारण डाक से (1 वर्ष)</span>
+      </div>
+    </h3>
+
+    <h3>
+      <div class="subscription-row">
+        <a href="https://secure.paytmpayments.com/link/paymentForm/QUICK/LL_725618784" class="btn" target="_blank">₹1500</a>
+        <span>विशेषांक रजिस्टर्ड डाक से और सभी मासिक अंक साधारण डाक से (5 वर्ष)</span>
+      </div>
+    </h3>
+
     <hr>
 
     <h4>*रजिस्टर्ड डाक में ट्रैकिंग सुविधा उपलब्ध है</h4>
@@ -270,7 +301,7 @@
     <hr>
   </div>
 
-  <!-- Mobile Social Buttons (Above Footer) -->
+  <!-- Mobile Social Buttons -->
   <div class="mobile-social-buttons">
     <a href="https://x.com/@GitaPress" target="_blank" class="social-btn twitter" data-tooltip="Twitter">
       <i class="fab fa-twitter"></i>
@@ -292,8 +323,8 @@
     <a href="mailto:kalyan@gitapress.org">kalyan@gitapress.org</a> | WhatsApp: +91-9235400242
   </footer>
 
-  <!-- Desktop Sidebar -->
-  <div class="social-sidebar" id="socialSidebar">
+  <!-- Desktop Social Sidebar -->
+  <div class="social-sidebar">
     <a href="https://x.com/@GitaPress" target="_blank" class="social-btn twitter" data-tooltip="Twitter">
       <i class="fab fa-twitter"></i>
     </a>
