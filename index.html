@@ -123,6 +123,93 @@
       color: inherit;
     }
 
+    /* === Desktop Social Sidebar === */
+    .social-sidebar {
+      position: fixed;
+      top: 40%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    .social-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      margin: 5px 0;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px 0 0 5px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-btn::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      right: 110%;
+      background-color: black;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateY(-50%) translateX(10px);
+      top: 50%;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      font-size: 13px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      z-index: 1002;
+    }
+
+    .social-btn::before {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 6px;
+      border-style: solid;
+      border-color: transparent black transparent transparent;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1001;
+    }
+
+    .social-btn:hover::after,
+    .social-btn:hover::before {
+      opacity: 1;
+    }
+
+    .social-btn.twitter:hover { background-color: #1DA1F2; }
+    .social-btn.facebook:hover { background-color: #3b5998; }
+    .social-btn.instagram:hover { background-color: #E4405F; }
+    .social-btn.youtube:hover { background-color: #FF0000; }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      font-size: 24px;
+      padding: 12px;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    /* Mobile Social Icons */
     .mobile-social-buttons {
       display: none;
     }
@@ -141,6 +228,10 @@
     }
 
     @media (max-width: 600px) {
+      .social-sidebar {
+        display: none;
+      }
+
       .mobile-social-buttons {
         display: flex;
         justify-content: center;
@@ -224,20 +315,25 @@
     <hr>
   </div>
 
-  <!-- Mobile Social Buttons -->
+  <!-- Desktop Sidebar -->
+  <div class="social-sidebar">
+    <a href="https://x.com/@GitaPress" target="_blank" class="social-btn twitter" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.facebook.com/Gitapresssince1923" target="_blank" class="social-btn facebook" data-tooltip="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/gitapress_since1923" target="_blank" class="social-btn instagram" data-tooltip="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/channel/UC12fbE3rHjtxiiKBuxLSEUQ" target="_blank" class="social-btn youtube" data-tooltip="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919235400242" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Mobile Social Icons -->
   <div class="mobile-social-buttons">
-    <a href="https://x.com/@GitaPress" target="_blank" class="social-btn twitter" data-tooltip="Twitter">
-      <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://www.facebook.com/Gitapresssince1923" target="_blank" class="social-btn facebook" data-tooltip="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.instagram.com/gitapress_since1923/#" target="_blank" class="social-btn instagram" data-tooltip="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.youtube.com/channel/UC12fbE3rHjtxiiKBuxLSEUQ" target="_blank" class="social-btn youtube" data-tooltip="YouTube">
-      <i class="fab fa-youtube"></i>
-    </a>
+    <a href="https://x.com/@GitaPress" target="_blank" class="social-btn"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.facebook.com/Gitapresssince1923" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/gitapress_since1923" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/channel/UC12fbE3rHjtxiiKBuxLSEUQ" target="_blank" class="social-btn"><i class="fab fa-youtube"></i></a>
   </div>
 
   <!-- Footer -->
